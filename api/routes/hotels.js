@@ -13,9 +13,13 @@ router.put('/:id',verifyAdmin,HotelController.updateHotel)
 //DELETE
 router.delete('/:id',verifyAdmin,HotelController.deleteHotel)
 //GET
-router.get('/:id',HotelController.getHotel)
+router.get('/find/:id',HotelController.getHotel)
+
 //GET ALL
 router.get('/',HotelController.getHotels)
+
+router.get("/countByCity", HotelController.countByCity);
+router.get("/countByType", HotelController.countByType);
 
 
 export default router
