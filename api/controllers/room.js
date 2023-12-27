@@ -33,6 +33,8 @@ const updateRoom = async (req, res, next) => {
     next(err);
   }
 };
+//Bir oda numarasının belirli tarih aralıklarında kullanılabilirliğini güncellemek amacıyla kullanılır. 
+// Yani belirtilen tarih aralığı, oda numarasının kullanılabilir olmama tarihleri olarak işaretlenir
 const updateRoomAvailability = async (req, res, next) => {
   try {
     await Room.updateOne(
